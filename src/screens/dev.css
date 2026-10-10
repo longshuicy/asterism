@@ -86,7 +86,7 @@
 
 .dev-frame {
   position: relative;
-  width: min(100%, calc(100svh - 150px));
+  width: min(100%, calc(100svh - 174px));
   aspect-ratio: 1;
   user-select: none;
 }

@@ -7,10 +7,10 @@
     "sentence": "The first thing I learned to hold was something that could hurt.",
     "x": 0.4,
     "y": 0.5,
-    "d": 0.18,
+    "d": 0.121,
     "text": {
-      "x": 0.51,
-      "y": 0.47,
+      "x": 0.475,
+      "y": 0.488,
       "align": "left"
     },
     "echo": {
@@ -24,17 +24,17 @@
     "kind": "echo",
     "object": "The lamb",
     "sentence": "Everyone told me to run. Nobody said where to.",
-    "x": 0.3,
-    "y": 0.66,
+    "x": 0.254,
+    "y": 0.614,
     "d": 0.18,
     "text": {
-      "x": 0.41,
-      "y": 0.63,
+      "x": 0.364,
+      "y": 0.584,
       "align": "left"
     },
     "echo": {
       "to": "taurus-matador",
-      "label": "Someone else taught to fight."
+      "label": "Someone taught to fight."
     }
   },
   {
@@ -42,13 +42,13 @@
     "drawing": "aries",
     "kind": "echo",
     "object": "The moon",
-    "sentence": "The moon was the only one who watched and said nothing.",
+    "sentence": "The moon was still there when everything else had ended.",
     "x": 0.506,
     "y": 0.04,
     "d": 0.07,
     "text": {
-      "x": 0.447,
-      "y": 0.026,
+      "x": 0.832,
+      "y": 0.034,
       "align": "right"
     },
     "echo": {
@@ -62,15 +62,68 @@
     "kind": "counterpoint",
     "object": "The horned figure",
     "sentence": "I grew the horns because no one came.",
-    "x": 0.64,
-    "y": 0.22,
+    "x": 0.842,
+    "y": 0.285,
     "d": 0.18,
     "text": {
-      "x": 0.53,
-      "y": 0.19,
+      "x": 1,
+      "y": 0.393,
       "align": "right"
     },
     "pair": "capricorn-horns"
+  },
+  {
+    "id": "aries-clue-5",
+    "drawing": "aries",
+    "kind": "fragment",
+    "object": "The distant castle",
+    "sentence": "From a distance, even a prison can look like somewhere worth going.",
+    "x": 0.343,
+    "y": 0.103,
+    "d": 0.1,
+    "text": {
+      "x": 0.413,
+      "y": 0.073,
+      "align": "left"
+    }
+  },
+  {
+    "id": "aries-clue-6",
+    "drawing": "aries",
+    "kind": "inscription",
+    "object": "The armor straps",
+    "sentence": "I wore my fear like armor.",
+    "x": 0.641,
+    "y": 0.407,
+    "d": 0.178,
+    "text": {
+      "x": 0.532,
+      "y": 0.377,
+      "align": "right"
+    },
+    "signs": [
+      "I",
+      "WORE",
+      "MY",
+      "FEAR",
+      "LIKE",
+      "ARMOR"
+    ]
+  },
+  {
+    "id": "aries-clue-7",
+    "drawing": "aries",
+    "kind": "fragment",
+    "object": "The broken ground",
+    "sentence": "Every road I knew seemed to lead through ruins.",
+    "x": 0.127,
+    "y": 0.308,
+    "d": 0.195,
+    "text": {
+      "x": 0.244,
+      "y": 0.278,
+      "align": "left"
+    }
   },
   {
     "id": "taurus-bull",
@@ -78,12 +131,12 @@
     "kind": "echo",
     "object": "The bull",
     "sentence": "It lowers its head not to charge, but to endure.",
-    "x": 0.4,
-    "y": 0.7,
+    "x": 0.612,
+    "y": 0.79,
     "d": 0.24,
     "text": {
-      "x": 0.54,
-      "y": 0.67,
+      "x": 0.199,
+      "y": 0.751,
       "align": "left"
     },
     "echo": {
@@ -97,17 +150,17 @@
     "kind": "echo",
     "object": "The matador",
     "sentence": "He wore his best clothes to do the cruelest thing.",
-    "x": 0.84,
-    "y": 0.52,
-    "d": 0.16,
+    "x": 0.687,
+    "y": 0.472,
+    "d": 0.131,
     "text": {
-      "x": 0.74,
-      "y": 0.49,
+      "x": 1,
+      "y": 0.549,
       "align": "right"
     },
     "echo": {
       "to": "aries-lamb",
-      "label": "Someone else taught to fight."
+      "label": "Someone taught to fight."
     }
   },
   {
@@ -115,13 +168,13 @@
     "drawing": "taurus",
     "kind": "echo",
     "object": "The rose window",
-    "sentence": "Behind every arena there is something ornate, pretending to be holy.",
-    "x": 0.55,
-    "y": 0.22,
-    "d": 0.22,
+    "sentence": "Every arena needs a god to justify its bloodshed.",
+    "x": 0.518,
+    "y": 0.234,
+    "d": 0.144,
     "text": {
-      "x": 0.42,
-      "y": 0.19,
+      "x": 0.881,
+      "y": 0.055,
       "align": "right"
     },
     "echo": {
@@ -130,17 +183,55 @@
     }
   },
   {
+    "id": "taurus-clue-4",
+    "drawing": "taurus",
+    "kind": "inscription",
+    "object": "The star",
+    "sentence": "The stars watched and did nothing.",
+    "x": 0.345,
+    "y": 0.16,
+    "d": 0.1,
+    "text": {
+      "x": 0.415,
+      "y": 0.13,
+      "align": "left"
+    },
+    "signs": [
+      "THE",
+      "STARS",
+      "WATCHED",
+      "AND",
+      "DID",
+      "NOTHING"
+    ]
+  },
+  {
+    "id": "taurus-clue-5",
+    "drawing": "taurus",
+    "kind": "fragment",
+    "object": "The curtains",
+    "sentence": "Even suffering can become beautiful when someone gives it a stage.",
+    "x": 0.09,
+    "y": 0.23,
+    "d": 0.165,
+    "text": {
+      "x": 0.193,
+      "y": 0.2,
+      "align": "left"
+    }
+  },
+  {
     "id": "gemini-face",
     "drawing": "gemini",
     "kind": "echo",
     "object": "The covered face",
     "sentence": "We hid our faces so neither of us had to answer.",
-    "x": 0.38,
-    "y": 0.42,
-    "d": 0.18,
+    "x": 0.367,
+    "y": 0.496,
+    "d": 0.131,
     "text": {
-      "x": 0.49,
-      "y": 0.39,
+      "x": 0.452,
+      "y": 0.466,
       "align": "left"
     },
     "echo": {
@@ -151,40 +242,105 @@
   {
     "id": "gemini-hands",
     "drawing": "gemini",
-    "kind": "echo",
+    "kind": "counterpoint",
     "object": "The hands",
-    "sentence": "Your hands still knew the way, even after the rest of you forgot.",
+    "sentence": "I remember how carefully we held each other.",
     "x": 0.66,
     "y": 0.77,
     "d": 0.18,
     "text": {
-      "x": 0.55,
-      "y": 0.74,
+      "x": 0.545,
+      "y": 0.664,
       "align": "right"
     },
-    "echo": {
-      "to": "scorpio-hands",
-      "label": "Other hands, holding on."
-    }
+    "pair": "scorpio-hands"
   },
   {
     "id": "gemini-daisies",
     "drawing": "gemini",
     "kind": "echo",
     "object": "The daisies",
-    "sentence": "We counted petals until there were none left to count.",
-    "x": 0.15,
-    "y": 0.15,
-    "d": 0.2,
+    "sentence": "Flowers always made me believe the world was kinder than it was.",
+    "x": 0.13,
+    "y": 0.197,
+    "d": 0.272,
     "text": {
-      "x": 0.27,
-      "y": 0.12,
+      "x": 0.25,
+      "y": 0.167,
       "align": "left"
     },
     "echo": {
       "to": "scorpio-roses",
       "label": "Elsewhere, flowers grow too close."
     }
+  },
+  {
+    "id": "gemini-hair",
+    "drawing": "gemini",
+    "kind": "counterpoint",
+    "object": "The flowing hair",
+    "sentence": "I remember the fragrance of your hair more clearly than your face.",
+    "x": 0.857,
+    "y": 0.218,
+    "d": 0.1,
+    "text": {
+      "x": 0.787,
+      "y": 0.188,
+      "align": "right"
+    },
+    "pair": "virgo-hair"
+  },
+  {
+    "id": "gemini-clue-5",
+    "drawing": "gemini",
+    "kind": "fragment",
+    "object": "The hidden face",
+    "sentence": "Within reach, beyond understanding.",
+    "x": 0.477,
+    "y": 0.438,
+    "d": 0.1,
+    "text": {
+      "x": 0.547,
+      "y": 0.408,
+      "align": "left"
+    }
+  },
+  {
+    "id": "gemini-clue-6",
+    "drawing": "gemini",
+    "kind": "fragment",
+    "object": "A daisy's dark center",
+    "sentence": "Even the brightest flowers carry a little darkness at their center.",
+    "x": 0.337,
+    "y": 0.082,
+    "d": 0.1,
+    "text": {
+      "x": 0.467,
+      "y": 0.076,
+      "align": "left"
+    }
+  },
+  {
+    "id": "gemini-clue-7",
+    "drawing": "gemini",
+    "kind": "inscription",
+    "object": "The shirt button",
+    "sentence": "Still holding on.",
+    "x": 0.225,
+    "y": 0.679,
+    "d": 0.1,
+    "text": {
+      "x": 0.295,
+      "y": 0.649,
+      "align": "left"
+    },
+    "signs": [
+      "STILL",
+      "HERE.",
+      "STILL",
+      "HOLDING",
+      "ON."
+    ]
   },
   {
     "id": "cancer-rings",
@@ -217,7 +373,7 @@
     },
     "echo": {
       "to": "pisces-pads",
-      "label": "Another small, enclosed world."
+      "label": "Another enclosed world."
     }
   },
   {
@@ -236,11 +392,79 @@
     }
   },
   {
+    "id": "cancer-clue-4",
+    "drawing": "cancer",
+    "kind": "inscription",
+    "object": "The outer ring",
+    "sentence": "Every return brought me back here.",
+    "x": 0.529,
+    "y": 0.178,
+    "d": 0.258,
+    "text": {
+      "x": 0.459,
+      "y": 0.148,
+      "align": "right"
+    },
+    "signs": [
+      "EVERY",
+      "RETURN",
+      "BROUGHT",
+      "ME",
+      "BACK",
+      "HERE."
+    ]
+  },
+  {
+    "id": "cancer-clue-5",
+    "drawing": "cancer",
+    "kind": "fragment",
+    "object": "The eyes",
+    "sentence": "From inside my little world, I watched everything happen somewhere else.",
+    "x": 0.514,
+    "y": 0.334,
+    "d": 0.1,
+    "text": {
+      "x": 0.444,
+      "y": 0.304,
+      "align": "right"
+    }
+  },
+  {
+    "id": "cancer-clue-6",
+    "drawing": "cancer",
+    "kind": "fragment",
+    "object": "The surrounding buds",
+    "sentence": "I planted something delicate along the walls.",
+    "x": 0.822,
+    "y": 0.169,
+    "d": 0.188,
+    "text": {
+      "x": 0.708,
+      "y": 0.139,
+      "align": "right"
+    }
+  },
+  {
+    "id": "cancer-clue-7",
+    "drawing": "cancer",
+    "kind": "fragment",
+    "object": "The inner circle",
+    "sentence": "The safest place I knew was also the smallest.",
+    "x": 0.375,
+    "y": 0.745,
+    "d": 0.14,
+    "text": {
+      "x": 0.436,
+      "y": 0.715,
+      "align": "left"
+    }
+  },
+  {
     "id": "leo-mouth",
     "drawing": "leo",
     "kind": "echo",
     "object": "The open mouth",
-    "sentence": "I was loud because quiet was where I could be hurt.",
+    "sentence": "I made a storm of myself to keep the silence away.",
     "x": 0.5,
     "y": 0.66,
     "d": 0.24,
@@ -258,7 +482,7 @@
     "id": "leo-eye",
     "drawing": "leo",
     "kind": "echo",
-    "object": "The eye",
+    "object": "The open eye",
     "sentence": "Look at the eye, not the teeth. The eye is afraid.",
     "x": 0.8,
     "y": 0.26,
@@ -271,6 +495,55 @@
     "echo": {
       "to": "pisces-watcher",
       "label": "Something else is watching."
+    }
+  },
+  {
+    "id": "leo-clue-4",
+    "drawing": "leo",
+    "kind": "fragment",
+    "object": "The mane",
+    "sentence": "The wildest parts of me were the ones I could never put into words.",
+    "x": 0.156,
+    "y": 0.404,
+    "d": 0.283,
+    "text": {
+      "x": 0.317,
+      "y": 0.374,
+      "align": "left"
+    }
+  },
+  {
+    "id": "leo-clue-5",
+    "drawing": "leo",
+    "kind": "echo",
+    "object": "The fang",
+    "sentence": "I had weapons before I understood what they were for.",
+    "x": 0.631,
+    "y": 0.725,
+    "d": 0.1,
+    "text": {
+      "x": 0.561,
+      "y": 0.695,
+      "align": "right"
+    },
+    "echo": {
+      "to": "aries-blade",
+      "label": "The weapon held in another hand."
+    }
+  },
+  {
+    "id": "leo-clue-6",
+    "drawing": "leo",
+    "kind": "fragment",
+    "object": "The whiskers",
+    "sentence": "You never know that the slightest touch could still make me flinch.",
+    "x": 0.882,
+    "y": 0.452,
+    "d": 0.1,
+    "text": {
+      "x": 0.812,
+      "y": 0.422,
+      "align": "right"
     }
   },
   {
@@ -327,18 +600,64 @@
     }
   },
   {
+    "id": "virgo-hair",
+    "drawing": "virgo",
+    "kind": "counterpoint",
+    "object": "The flowing hair",
+    "sentence": "I spent so long trying to put things in order, but I never managed to tame the wind.",
+    "x": 0.146,
+    "y": 0.429,
+    "d": 0.247,
+    "text": {
+      "x": 0.29,
+      "y": 0.399,
+      "align": "left"
+    },
+    "pair": "gemini-hair"
+  },
+  {
+    "id": "virgo-clue-5",
+    "drawing": "virgo",
+    "kind": "fragment",
+    "object": "The raised hand",
+    "sentence": "I tried to understand myself by examining every little part.",
+    "x": 0.341,
+    "y": 0.797,
+    "d": 0.269,
+    "text": {
+      "x": 0.496,
+      "y": 0.767,
+      "align": "left"
+    }
+  },
+  {
+    "id": "virgo-clue-6",
+    "drawing": "virgo",
+    "kind": "fragment",
+    "object": "The edge",
+    "sentence": "Not everything that leaves the frame is gone.",
+    "x": 0.948,
+    "y": 0.049,
+    "d": 0.1,
+    "text": {
+      "x": 0.846,
+      "y": 0.03,
+      "align": "right"
+    }
+  },
+  {
     "id": "libra-lamp",
     "drawing": "libra",
     "kind": "echo",
     "object": "The lamp",
     "sentence": "I kept it lit to prove I hadn't left.",
-    "x": 0.5,
-    "y": 0.56,
-    "d": 0.18,
+    "x": 0.498,
+    "y": 0.576,
+    "d": 0.154,
     "text": {
-      "x": 0.39,
-      "y": 0.53,
-      "align": "right"
+      "x": 0.548,
+      "y": 0.294,
+      "align": "left"
     },
     "echo": {
       "to": "capricorn-lamp",
@@ -350,13 +669,13 @@
     "drawing": "libra",
     "kind": "fragment",
     "object": "The long-haired figure",
-    "sentence": "She stands where the scale can't reach her.",
-    "x": 0.24,
-    "y": 0.62,
+    "sentence": "Justice lies beheaded at the temple steps.",
+    "x": 0.278,
+    "y": 0.517,
     "d": 0.18,
     "text": {
-      "x": 0.35,
-      "y": 0.59,
+      "x": 0.388,
+      "y": 0.487,
       "align": "left"
     }
   },
@@ -366,9 +685,9 @@
     "kind": "echo",
     "object": "The border",
     "sentence": "Such beautiful edges around something that never sat still.",
-    "x": 0.08,
-    "y": 0.08,
-    "d": 0.14,
+    "x": 0.109,
+    "y": 0.105,
+    "d": 0.194,
     "text": {
       "x": 0.17,
       "y": 0.05,
@@ -380,23 +699,35 @@
     }
   },
   {
+    "id": "libra-clue-4",
+    "drawing": "libra",
+    "kind": "fragment",
+    "object": "The balance",
+    "sentence": "I kept asking what a life was worth.",
+    "x": 0.72,
+    "y": 0.65,
+    "d": 0.216,
+    "text": {
+      "x": 0.592,
+      "y": 0.62,
+      "align": "right"
+    }
+  },
+  {
     "id": "scorpio-hands",
     "drawing": "scorpio",
-    "kind": "echo",
+    "kind": "counterpoint",
     "object": "The hands",
     "sentence": "These hands held on long after the dream should have ended.",
     "x": 0.28,
     "y": 0.8,
     "d": 0.22,
     "text": {
-      "x": 0.41,
-      "y": 0.77,
+      "x": 0.422,
+      "y": 0.605,
       "align": "left"
     },
-    "echo": {
-      "to": "gemini-hands",
-      "label": "Other hands, holding on."
-    }
+    "pair": "gemini-hands"
   },
   {
     "id": "scorpio-roses",
@@ -442,9 +773,9 @@
     "kind": "fragment",
     "object": "The stitches",
     "sentence": "Some things were sewn shut on purpose.",
-    "x": 0.42,
-    "y": 0.44,
-    "d": 0.1,
+    "x": 0.398,
+    "y": 0.453,
+    "d": 0.17,
     "text": {
       "x": 0.49,
       "y": 0.41,
@@ -457,12 +788,12 @@
     "kind": "echo",
     "object": "The sword",
     "sentence": "I put it down, but I never stopped carrying it.",
-    "x": 0.62,
-    "y": 0.5,
+    "x": 0.673,
+    "y": 0.546,
     "d": 0.18,
     "text": {
-      "x": 0.51,
-      "y": 0.47,
+      "x": 0.563,
+      "y": 0.516,
       "align": "right"
     },
     "echo": {
@@ -476,12 +807,12 @@
     "kind": "echo",
     "object": "The moon",
     "sentence": "The same moon, but now I'm the one who is armed.",
-    "x": 0.58,
-    "y": 0.14,
+    "x": 0.588,
+    "y": 0.146,
     "d": 0.12,
     "text": {
-      "x": 0.5,
-      "y": 0.11,
+      "x": 0.508,
+      "y": 0.116,
       "align": "right"
     },
     "echo": {
@@ -509,6 +840,21 @@
     }
   },
   {
+    "id": "sagittarius-clue-4",
+    "drawing": "sagittarius",
+    "kind": "fragment",
+    "object": "The victory",
+    "sentence": "I had imagined victory so many times. I had never imagined what came afterward.",
+    "x": 0.175,
+    "y": 0.193,
+    "d": 0.1,
+    "text": {
+      "x": 0.245,
+      "y": 0.163,
+      "align": "left"
+    }
+  },
+  {
     "id": "capricorn-lamp",
     "drawing": "capricorn",
     "kind": "echo",
@@ -533,8 +879,8 @@
     "kind": "echo",
     "object": "The poured glass",
     "sentence": "A drink poured for someone who isn't coming.",
-    "x": 0.129,
-    "y": 0.55,
+    "x": 0.15,
+    "y": 0.535,
     "d": 0.1,
     "text": {
       "x": 0.199,
@@ -551,20 +897,25 @@
     "drawing": "capricorn",
     "kind": "inscription",
     "object": "The four signs",
-    "sentence": "Thought, then an idea, then heartbreak, then this.",
-    "x": 0.4,
-    "y": 0.879,
-    "d": 0.2,
+    "sentence": "You know this is going to end in tears.",
+    "x": 0.397,
+    "y": 0.894,
+    "d": 0.123,
     "text": {
-      "x": 0.52,
-      "y": 0.679,
+      "x": 0.478,
+      "y": 0.732,
       "align": "left"
     },
     "signs": [
-      "a thought,",
-      "an idea,",
-      "a heartbreak,",
-      "a tear."
+      "YOU",
+      "KNOW",
+      "THIS",
+      "IS",
+      "GOING",
+      "TO",
+      "END",
+      "IN",
+      "TEARS"
     ]
   },
   {
@@ -589,8 +940,8 @@
     "kind": "sealed",
     "object": "A hand pulling a thread",
     "sentence": "Someone is still pulling at it.",
-    "x": 0.821,
-    "y": 0.14,
+    "x": 0.836,
+    "y": 0.087,
     "d": 0.1,
     "text": {
       "x": 0.751,
@@ -607,8 +958,8 @@
     "kind": "sealed",
     "object": "The doorway",
     "sentence": "I never walked through it, only past.",
-    "x": 0.9,
-    "y": 0.46,
+    "x": 0.902,
+    "y": 0.433,
     "d": 0.12,
     "text": {
       "x": 0.82,
@@ -627,7 +978,7 @@
     "sentence": "I dressed properly for the occasion of my own disappointment.",
     "x": 0.621,
     "y": 0.321,
-    "d": 0.12,
+    "d": 0.231,
     "text": {
       "x": 0.541,
       "y": 0.291,
@@ -646,21 +997,6 @@
     "text": {
       "x": 0.191,
       "y": 0.249,
-      "align": "left"
-    }
-  },
-  {
-    "id": "capricorn-pelmet",
-    "drawing": "capricorn",
-    "kind": "fragment",
-    "object": "The pelmet",
-    "sentence": "Everything in this room is dressed, even the windows.",
-    "x": 0.35,
-    "y": 0.06,
-    "d": 0.1,
-    "text": {
-      "x": 0.42,
-      "y": 0.03,
       "align": "left"
     }
   },
@@ -685,8 +1021,8 @@
     "kind": "fragment",
     "object": "What he holds",
     "sentence": "A cloth for tears he won't admit to.",
-    "x": 0.74,
-    "y": 0.66,
+    "x": 0.737,
+    "y": 0.641,
     "d": 0.1,
     "text": {
       "x": 0.67,
@@ -700,8 +1036,8 @@
     "kind": "fragment",
     "object": "The side table",
     "sentence": "Where I put things down and forgot them.",
-    "x": 0.121,
-    "y": 0.729,
+    "x": 0.081,
+    "y": 0.708,
     "d": 0.1,
     "text": {
       "x": 0.191,
@@ -734,8 +1070,8 @@
     "kind": "echo",
     "object": "The seated figure",
     "sentence": "I sat with my knees up, the way you do when nothing is coming.",
-    "x": 0.5,
-    "y": 0.32,
+    "x": 0.504,
+    "y": 0.347,
     "d": 0.18,
     "text": {
       "x": 0.39,
@@ -772,13 +1108,47 @@
     "kind": "fragment",
     "object": "The birds",
     "sentence": "Even the birds were leaving.",
-    "x": 0.8,
-    "y": 0.07,
+    "x": 0.888,
+    "y": 0.083,
     "d": 0.12,
     "text": {
-      "x": 0.72,
-      "y": 0.04,
+      "x": 0.808,
+      "y": 0.053,
       "align": "right"
+    }
+  },
+  {
+    "id": "aquarius-clue-5",
+    "drawing": "aquarius",
+    "kind": "echo",
+    "object": "The rocky shore",
+    "sentence": "I went as far as the land would let me.",
+    "x": 0.673,
+    "y": 0.873,
+    "d": 0.195,
+    "text": {
+      "x": 0.556,
+      "y": 0.675,
+      "align": "right"
+    },
+    "echo": {
+      "to": "aries-clue-7",
+      "label": "At the edge of the world."
+    }
+  },
+  {
+    "id": "aquarius-clue-6",
+    "drawing": "aquarius",
+    "kind": "fragment",
+    "object": "The island",
+    "sentence": "Or maybe you were the ocean, when I was just a stone.",
+    "x": 0.092,
+    "y": 0.6,
+    "d": 0.1,
+    "text": {
+      "x": 0.162,
+      "y": 0.57,
+      "align": "left"
     }
   },
   {
@@ -787,12 +1157,12 @@
     "kind": "echo",
     "object": "The one below",
     "sentence": "Smaller water. Closer company.",
-    "x": 0.33,
-    "y": 0.66,
+    "x": 0.348,
+    "y": 0.562,
     "d": 0.22,
     "text": {
-      "x": 0.46,
-      "y": 0.63,
+      "x": 0.478,
+      "y": 0.532,
       "align": "left"
     },
     "echo": {
@@ -806,12 +1176,12 @@
     "kind": "echo",
     "object": "The one above",
     "sentence": "Someone was always watching from just above the surface.",
-    "x": 0.68,
-    "y": 0.22,
+    "x": 0.693,
+    "y": 0.188,
     "d": 0.16,
     "text": {
-      "x": 0.58,
-      "y": 0.19,
+      "x": 0.593,
+      "y": 0.158,
       "align": "right"
     },
     "echo": {
@@ -836,6 +1206,36 @@
     "echo": {
       "to": "cancer-center",
       "label": "Another small, enclosed world."
+    }
+  },
+  {
+    "id": "pisces-clue-4",
+    "drawing": "pisces",
+    "kind": "fragment",
+    "object": "The edge of a lily pad",
+    "sentence": "I lived on the thin boundary between sinking and staying afloat.",
+    "x": 0.95,
+    "y": 0.063,
+    "d": 0.1,
+    "text": {
+      "x": 0.88,
+      "y": 0.033,
+      "align": "right"
+    }
+  },
+  {
+    "id": "pisces-clue-5",
+    "drawing": "pisces",
+    "kind": "fragment",
+    "object": "The leaf",
+    "sentence": "Rootless, we drift.",
+    "x": 0.867,
+    "y": 0.735,
+    "d": 0.1,
+    "text": {
+      "x": 0.797,
+      "y": 0.705,
+      "align": "right"
     }
   }
 ]

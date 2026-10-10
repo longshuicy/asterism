@@ -15,6 +15,8 @@ export type Sign =
 export type Drawing = {
   sign: Sign
   name: string
+  dates: string
+  qualities: [string, string, string]
   couplet: [string, string]
   /** Column and row of this drawing's slot in the 6 × 3 Asterism grid. */
   cell: [number, number]

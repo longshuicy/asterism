@@ -18,8 +18,8 @@
 /* Six by three slots; twelve drawings, six left dark. */
 .field {
   position: relative;
-  width: min(100%, calc((100svh - 100px) * 1360 / 760));
-  aspect-ratio: 1360 / 760;
+  width: min(100%, calc((100svh - 124px) * 2));
+  aspect-ratio: 2 / 1;
 }
 
 .cell {
@@ -199,7 +199,6 @@
     aspect-ratio: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
   }
   .cell {
     position: relative;

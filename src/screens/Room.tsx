@@ -2,12 +2,12 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Navigate, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { drawingOf, fragmentOf, fragmentsIn, isSign, letterOf } from '../content'
-import type { Condition, Fragment, Kind, Sign } from '../content/types'
+import type { Fragment, Kind, Sign } from '../content/types'
 import { imageUrl } from '../lib/images'
 import { useReducedMotion } from '../lib/useReducedMotion'
 import { foundOrder, foundSet, hasRunDry, isUnlocked, useVisit, type Via } from '../store/visit'
 import { LensView, type Aim, type LensState } from '../lens/LensView'
-import { KIND_LABEL, KIND_RULE, Marker } from '../components/Marker'
+import { KIND_LEGEND, KIND_RULE, Marker } from '../components/Marker'
 import { Nav } from '../components/Nav'
 import { DarkLift } from '../components/DarkLift'
 import { FlyIn, toRect, type RectLike } from '../components/FlyIn'
@@ -173,7 +173,12 @@ function RoomIn({ sign }: { sign: Sign }) {
         </div>
 
         <aside className="notes" aria-label={`${drawing.name}: what you have found`}>
-          <h1 className="sign-name">{drawing.name}</h1>
+          <div className="sign-head">
+            <h1 className="sign-name">{drawing.name}</h1>
+            <span className="sign-dot" aria-hidden="true">·</span>
+            <p className="sign-dates">{drawing.dates}</p>
+          </div>
+          <p className="sign-qualities">{drawing.qualities.join(' · ')}</p>
           <p className="couplet">
             {drawing.couplet[0]} {drawing.couplet[1]}
           </p>
@@ -183,7 +188,7 @@ function RoomIn({ sign }: { sign: Sign }) {
               <li key={k} className={k === 'echo' ? 'echo' : undefined}>
                 <span className="legend-term" tabIndex={0} aria-describedby={`rule-${k}`}>
                   <Marker kind={k} size={14} />
-                  {KIND_LABEL[k]}
+                  {KIND_LEGEND[k]}
                 </span>
                 <span className="legend-rule" role="tooltip" id={`rule-${k}`}>
                   {KIND_RULE[k]}
@@ -241,18 +246,7 @@ function possessive(f: Fragment) {
   return `${name}'s ${f.object.replace(/^the\s+/i, '').toLowerCase()}`
 }
 
-function opensWhen(c: Condition | undefined): string {
-  if (!c) return 'Opened'
-  if ('visited' in c) return `Opens after a visit to ${drawingOf(c.visited).name}`
-  if ('found' in c) {
-    const t = fragmentOf(c.found)
-    return t ? `Opens after finding ${possessive(t)}` : 'Opens after another find'
-  }
-  if ('followedAny' in c) return 'Opens after any thread is followed'
-  return `Opens after ${c.foundCount} finds`
-}
-
-/** One found clue, as on the clue map: letter and object, the sentence, and what it does. */
+/** One found clue, as on the clue map: letter and object, the sentence, and where it leads. */
 type FoundProps = { f: Fragment; state: LensState; nudge: boolean; onFollow: (f: Fragment) => void }
 
 function FoundItem({ f, state, nudge, onFollow }: FoundProps) {
@@ -277,20 +271,15 @@ function FoundItem({ f, state, nudge, onFollow }: FoundProps) {
           <Marker kind="echo" size={11} />
           <span className="found-note-text">Thread to {possessive(target)}</span>
         </a>
-      ) : (
-        <p className="found-note" title={pair && state.pairFound(f) ? `“${pair.sentence}”` : undefined}>
-          <Marker kind={f.kind} size={11} />
-          {f.kind === 'inscription' && <span className="found-note-text">Lens reads the signs one by one</span>}
-          {f.kind === 'sealed' && <span className="found-note-text">{opensWhen(f.sealed)}</span>}
-          {f.kind === 'fragment' && <span className="found-note-text">Stays here</span>}
-          {f.kind === 'counterpoint' && pair && (
-            <span className="found-note-text">
-              Answers {pair.object.toLowerCase()} in {drawingOf(pair.drawing).name}
-              {state.pairFound(f) && <em>: “{pair.sentence}”</em>}
-            </span>
-          )}
+      ) : f.kind === 'counterpoint' && pair ? (
+        <p className="found-note" title={state.pairFound(f) ? `“${pair.sentence}”` : undefined}>
+          <Marker kind="counterpoint" size={11} />
+          <span className="found-note-text">
+            Answers {pair.object.toLowerCase()} in {drawingOf(pair.drawing).name}
+            {state.pairFound(f) && <em>: “{pair.sentence}”</em>}
+          </span>
         </p>
-      )}
+      ) : null}
     </li>
   )
 }

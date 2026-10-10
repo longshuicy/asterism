@@ -16,7 +16,7 @@
 
 .print-wrap {
   position: relative;
-  height: min(calc(100svh - 110px), calc((100vw - 32px) * 1.25));
+  height: min(calc(100svh - 134px), calc((100vw - 32px) * 1.25));
   aspect-ratio: 1080 / 1350;
   max-width: 100%;
 }

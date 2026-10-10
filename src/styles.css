@@ -84,13 +84,13 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  padding: 8px clamp(16px, 3vw, 40px) 0;
+  padding: 20px clamp(16px, 3vw, 40px) 12px;
   font-size: 15px;
 }
 
 .topnav .links {
   display: flex;
-  gap: 24px;
+  gap: 36px;
   margin-left: auto;
 }
 

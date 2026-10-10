@@ -51,14 +51,14 @@
 .weft {
   fill: none;
   stroke: var(--thread);
-  stroke-width: 3;
+  stroke-width: max(1.2px, calc(3px * var(--k, 1)));
   stroke-linecap: round;
 }
 
 .weft-under {
   fill: none;
   stroke: var(--ground);
-  stroke-width: 7;
+  stroke-width: max(2.5px, calc(7px * var(--k, 1)));
   stroke-linecap: round;
   opacity: 0.6;
 }
@@ -73,22 +73,12 @@
 .bead {
   fill: var(--thread);
   stroke: var(--ground);
-  stroke-width: 2;
+  stroke-width: max(0.8px, calc(2px * var(--k, 1)));
 }
 
 .snip {
   stroke: var(--bright);
   stroke-width: 1.6;
-}
-
-.weft-label {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 15px;
-  fill: var(--bright);
-  stroke: var(--ground);
-  stroke-width: 4px;
-  paint-order: stroke;
 }
 
 .loom-bar {

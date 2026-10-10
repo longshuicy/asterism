@@ -6,7 +6,7 @@ import type { Sign } from '../content/types'
 import { imageUrl } from '../lib/images'
 import { useReducedMotion } from '../lib/useReducedMotion'
 import { canCut, CUT_AT, useVisit, wovenCount } from '../store/visit'
-import { LOOM_W, STRIP, WARP_TOP, warpX, weave } from '../loom/weave'
+import { LOOM_W, ROW, STRIP, WARP_TOP, warpX, weave } from '../loom/weave'
 import { Nav } from '../components/Nav'
 import { FlyIn, toRect, type RectLike } from '../components/FlyIn'
 import type { RoomArrival } from './Room'
@@ -25,11 +25,9 @@ export default function Loom() {
   const events = useVisit((s) => s.events)
   const stories = useVisit((s) => s.stories)
   const cut = useVisit((s) => s.cut)
-  const w = useMemo(() => weave(events), [events])
 
-  // On a laptop the loom fills the space between the nav and the bar: the
-  // canvas is at least as tall as that space allows at full width, and a long
-  // weave scales down to fit rather than scrolling.
+  // On a laptop the loom fills the space between the nav and the bar at full
+  // width, and a long weave packs its rows closer together rather than scrolling.
   const area = useRef<HTMLDivElement>(null)
   const [fitH, setFitH] = useState(0)
   useLayoutEffect(() => {
@@ -37,12 +35,15 @@ export default function Loom() {
     if (!el) return
     const ro = new ResizeObserver(([e]) => {
       const { width, height } = e.contentRect
-      setFitH(width >= 900 ? Math.round((LOOM_W * height) / width) : 0)
+      setFitH(width >= 900 ? Math.floor((LOOM_W * height) / width) : 0)
     })
     ro.observe(el)
     return () => ro.disconnect()
   }, [])
-  const H = fitH ? Math.max(fitH, w.height - 60) : w.height
+  const w = useMemo(() => weave(events, fitH), [events, fitH])
+  const H = fitH || Math.max(900, w.height)
+  // Thread and beads thin out as the rows pack closer.
+  const k = Math.min(1, w.row / ROW)
   const cuttable = canCut(events)
   const woven = wovenCount(events)
 
@@ -69,7 +70,11 @@ export default function Loom() {
       <Nav />
       <h1 className="sr-only">The Loom</h1>
 
-      <div className={`loom-scroll${fitH ? ' fit' : ''}`} ref={area}>
+      <div
+        className={`loom-scroll${fitH ? ' fit' : ''}`}
+        ref={area}
+        style={{ '--k': k } as React.CSSProperties}
+      >
         <motion.svg
           className="loom-svg"
           viewBox={`0 0 ${LOOM_W} ${H}`}
@@ -116,7 +121,7 @@ export default function Loom() {
           <path d={w.coral} className="weft-under" />
           <path d={w.coral} className="weft" />
           {w.beads.map((b, i) => (
-            <circle key={i} cx={b.x} cy={b.y} r="6" className="bead" />
+            <circle key={i} cx={b.x} cy={b.y} r={Math.max(2, 6 * k)} className="bead" />
           ))}
           {w.snips.map((s, i) => (
             <path
@@ -124,11 +129,6 @@ export default function Loom() {
               d={`M${s.x - 6} ${s.y + 4}L${s.x + 6} ${s.y + 16}M${s.x + 6} ${s.y + 4}L${s.x - 6} ${s.y + 16}`}
               className="snip"
             />
-          ))}
-          {w.labels.map((l, i) => (
-            <text key={i} x={l.x} y={l.y} textAnchor="middle" className="weft-label">
-              {l.text}
-            </text>
           ))}
         </motion.svg>
       </div>

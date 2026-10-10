@@ -9,8 +9,9 @@ export const STRIP = 84
 export const WARP_TOP = 78
 const HALF = STRIP / 2
 const MARGIN = 12 // how far a pass reaches past the strip before turning
-const ROW = 21
+export const ROW = 21
 const FIRST_ROW = 122
+const TAIL = 100 // room below the last row for the loose end
 
 export const warpX = (i: number) => PITCH / 2 + i * PITCH
 
@@ -18,8 +19,8 @@ export type Weave = {
   coral: string // the thread: passes, echo crossings and turns, with over/under gaps
   plain: { x1: number; x2: number; y: number }[] // crossings via the Asterism or the loom
   beads: { x: number; y: number }[] // one per clue found
-  labels: { x: number; y: number; text: string }[] // echo phrases on coral crossings
   snips: { x: number; y: number }[] // where a story was cut
+  row: number // vertical distance between passes
   height: number
   touched: Set<Sign>
 }
@@ -27,9 +28,18 @@ export type Weave = {
 /**
  * Walks the log into rows. Each `find` is a pass across the current warp with a
  * bead on it; each `enter` is a crossing to another warp. Crossings made by
- * following an echo are coral and carry its phrase; the rest are a thin plain weft.
+ * following an echo are coral; the rest are a thin plain weft.
+ *
+ * With `fit`, rows are packed closer together so the weave is no taller than `fit`.
  */
-export function weave(events: Event[]): Weave {
+export function weave(events: Event[], fit = 0): Weave {
+  const full = walk(events, ROW)
+  if (!fit || full.height <= fit) return full
+  const rows = (full.height - FIRST_ROW - TAIL) / ROW
+  return walk(events, Math.max(1, (fit - FIRST_ROW - TAIL) / rows))
+}
+
+function walk(events: Event[], rowH: number): Weave {
   const index = (s: Sign) => SIGNS.indexOf(s)
   const left = (i: number) => warpX(i) - HALF - MARGIN
   const right = (i: number) => warpX(i) + HALF + MARGIN
@@ -37,7 +47,6 @@ export function weave(events: Event[]): Weave {
   const coral: string[] = []
   const plain: Weave['plain'] = []
   const beads: Weave['beads'] = []
-  const labels: Weave['labels'] = []
   const snips: Weave['snips'] = []
   const touched = new Set<Sign>()
 
@@ -45,9 +54,9 @@ export function weave(events: Event[]): Weave {
   let x = 0
   let row = 0
   let open = false // is the coral path continuous into the next row?
-  let pendingLabel: string | null = null
+  let followed = false // was the next crossing made by following an echo?
 
-  const y = () => FIRST_ROW + row * ROW
+  const y = () => FIRST_ROW + row * rowH
 
   /** Horizontal coral run at the current row, broken wherever it passes under a strip. */
   function run(x1: number, x2: number) {
@@ -72,7 +81,7 @@ export function weave(events: Event[]): Weave {
   /** Turn down to the next row, bulging away from the warp. */
   function turn(warp: number) {
     const sweep = x > warpX(warp) ? 1 : 0
-    coral.push(`M${x} ${y()} A10.5 10.5 0 0 ${sweep} ${x} ${y() + ROW}`)
+    coral.push(`M${x} ${y()} A${rowH / 2} ${rowH / 2} 0 0 ${sweep} ${x} ${y() + rowH}`)
     row++
   }
 
@@ -87,13 +96,9 @@ export function weave(events: Event[]): Weave {
       }
       if (j === cur) continue
       const to = warpX(j) > x ? left(j) : right(j)
-      if (e.via === 'thread' && pendingLabel !== null) {
-        run(x, to)
-        labels.push({ x: (x + to) / 2, y: y() - 7, text: pendingLabel })
-      } else {
-        plain.push({ x1: x, x2: to, y: y() })
-      }
-      pendingLabel = null
+      if (e.via === 'thread' && followed) run(x, to)
+      else plain.push({ x1: x, x2: to, y: y() })
+      followed = false
       x = to
       cur = j
       turn(cur)
@@ -109,11 +114,11 @@ export function weave(events: Event[]): Weave {
       turn(cur)
       open = true
     } else if (e.type === 'follow') {
-      pendingLabel = fragmentOf(e.from)?.echo?.label ?? ''
+      followed = true
     } else if (e.type === 'cut' && cur !== null) {
       // Drop the last turn and leave a gap with a snip mark: the cloth was cut here.
       if (open) coral.pop()
-      snips.push({ x, y: y() - ROW })
+      snips.push({ x, y: y() - rowH })
       row++
       open = false
     }
@@ -122,16 +127,16 @@ export function weave(events: Event[]): Weave {
   if (open && cur !== null) {
     // The loose end hangs off the loom.
     coral.pop()
-    coral.push(`M${x} ${y() - ROW}V${y() + 70}`)
+    coral.push(`M${x} ${y() - rowH}V${y() + 70}`)
   }
 
   return {
     coral: coral.join(' '),
     plain,
     beads,
-    labels,
     snips,
-    height: Math.max(900, FIRST_ROW + row * ROW + 160),
+    row: rowH,
+    height: FIRST_ROW + row * rowH + TAIL,
     touched,
   }
 }

@@ -40,6 +40,15 @@ export const KIND_RULE: Record<Kind, string> = {
   counterpoint: 'Half of a pair split across two drawings. Find both halves and the two lines sit together.',
 }
 
+/** What the legend calls each kind, for the visitor. */
+export const KIND_LEGEND: Record<Kind, string> = {
+  echo: 'A thread to another drawing',
+  fragment: 'A line that stays here',
+  sealed: 'Opens after something elsewhere',
+  inscription: 'Signs read one by one',
+  counterpoint: 'Half of a pair',
+}
+
 export const KIND_LABEL: Record<Kind, string> = {
   fragment: 'Fragment',
   echo: 'Echo',

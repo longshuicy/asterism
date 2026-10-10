@@ -2,72 +2,96 @@
   {
     "sign": "aries",
     "name": "Aries",
+    "dates": "March 22 – April 19",
+    "qualities": ["Bold", "Fiery", "Daring"],
     "couplet": ["Run, run, before they come and find you,", "Grow up 'til you're taught to fight back."],
     "cell": [0, 0]
   },
   {
     "sign": "taurus",
     "name": "Taurus",
+    "dates": "April 20 – May 20",
+    "qualities": ["Steadfast", "Sensual", "Resilient"],
     "couplet": ["No need to flee, though the world's gaze is unkind,", "I bear it all, willingly resigned."],
     "cell": [1, 0]
   },
   {
     "sign": "gemini",
     "name": "Gemini",
+    "dates": "May 21 – June 20",
+    "qualities": ["Curious", "Lively", "Mercurial"],
     "couplet": ["I've heard the whispers of your heart,", "But they no longer hold their part."],
     "cell": [3, 0]
   },
   {
     "sign": "cancer",
     "name": "Cancer",
+    "dates": "June 21 – July 22",
+    "qualities": ["Intuitive", "Tender", "Sentimental"],
     "couplet": ["Emotions fall like rain, unending and fraught,", "The more I ponder, the more tangled my thoughts."],
     "cell": [4, 0]
   },
   {
     "sign": "leo",
     "name": "Leo",
+    "dates": "July 23 – Aug 22",
+    "qualities": ["Radiant", "Regal", "Passionate"],
     "couplet": ["I lack all gentleness,", "Yet hold this lone courage."],
     "cell": [5, 0]
   },
   {
     "sign": "virgo",
     "name": "Virgo",
+    "dates": "Aug 23 – Sept 22",
+    "qualities": ["Precise", "Thoughtful", "Pure"],
     "couplet": ["Let the soul remain fragmented,", "Until one distant year, when pain engulfs again."],
     "cell": [0, 1]
   },
   {
     "sign": "libra",
     "name": "Libra",
+    "dates": "Sept 23 – Oct 22",
+    "qualities": ["Graceful", "Refined", "Balanced"],
     "couplet": ["It's hard to balance restless fluctuations,", "Hard to forgive the heart's constant wavering."],
     "cell": [2, 1]
   },
   {
     "sign": "scorpio",
     "name": "Scorpio",
+    "dates": "Oct 23 – Nov 21",
+    "qualities": ["Intense", "Enigmatic", "Magnetic"],
     "couplet": ["A dream within a dream,", "One I can never wake from."],
     "cell": [3, 1]
   },
   {
     "sign": "sagittarius",
     "name": "Sagittarius",
+    "dates": "Nov 22 – Dec 21",
+    "qualities": ["Adventurous", "Wise", "Untamed"],
     "couplet": ["My sword,", "Where shall it roam?"],
     "cell": [5, 1]
   },
   {
     "sign": "capricorn",
     "name": "Capricorn",
+    "dates": "Dec 22 – Jan 19",
+    "qualities": ["Determined", "Devoted", "Ascetic"],
     "couplet": ["So suffer your fate, Oh,", "Come here and give me a hug."],
     "cell": [2, 2]
   },
   {
     "sign": "aquarius",
     "name": "Aquarius",
+    "dates": "Jan 20 – Feb 18",
+    "qualities": ["Humanitarian", "Creative", "Independent"],
     "couplet": ["With me you wander, no end in sight,", "Drifting freely through day and night."],
     "cell": [3, 2]
   },
   {
     "sign": "pisces",
     "name": "Pisces",
+    "dates": "Feb 19 – March 20",
+    "qualities": ["Dreamy", "Compassionate", "Mystical"],
     "couplet": ["The great fish swims through the seams of dreams,", "Gazing upon the silhouette of your slumber."],
     "cell": [4, 2]
   }

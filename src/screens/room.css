@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-/* The drawing on the left, as large as the screen allows; the notes beside it. */
+/* The drawing on the left, about as wide as the notes beside it. */
 .room-body {
   flex: 1;
   display: grid;
@@ -22,7 +22,7 @@
 }
 
 .stage .frame {
-  width: min(calc(100svh - 100px), 60vw);
+  width: min(calc(100svh - 164px), 50vw);
 }
 
 .look {
@@ -93,6 +93,38 @@
   line-height: 1.05;
 }
 
+.sign-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 12px;
+}
+
+.sign-dot {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--faint);
+}
+
+.sign-dates,
+.sign-qualities {
+  margin: 0;
+  font-family: var(--serif);
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+}
+
+.sign-dates {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.sign-qualities {
+  margin-top: 4px;
+  font-size: 18px;
+  color: var(--ink);
+}
+
 .couplet {
   margin: 10px 0 18px;
   font-family: var(--serif);
@@ -138,13 +170,13 @@
   left: 0;
   top: calc(100% + 8px);
   z-index: 20;
-  width: 240px;
-  padding: 10px 12px;
+  width: 280px;
+  padding: 8px 12px;
   background: #0d2840;
   border: 1px solid var(--rule);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 12.5px;
+  line-height: 1.4;
   color: var(--soft);
   opacity: 0;
   visibility: hidden;
@@ -342,10 +374,10 @@ a.found-note.nudge {
   .room-body {
     min-height: 0;
     align-items: stretch;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
   .stage .frame {
-    width: min(calc(100svh - 84px), 56vw);
+    width: min(calc(100svh - 164px), 46vw);
   }
   .look {
     position: absolute;
@@ -364,6 +396,12 @@ a.found-note.nudge {
   }
   .sign-name {
     font-size: clamp(30px, 5svh, 48px);
+  }
+  .sign-dates {
+    font-size: clamp(15px, 2.2svh, 18px);
+  }
+  .sign-qualities {
+    font-size: clamp(15px, 2.2svh, 18px);
   }
   .couplet {
     margin: clamp(4px, 1svh, 10px) 0 clamp(8px, 2svh, 18px);
