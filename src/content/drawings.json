@@ -1,0 +1,74 @@
+[
+  {
+    "sign": "aries",
+    "name": "Aries",
+    "couplet": ["Run, run, before they come and find you,", "Grow up 'til you're taught to fight back."],
+    "cell": [0, 0]
+  },
+  {
+    "sign": "taurus",
+    "name": "Taurus",
+    "couplet": ["No need to flee, though the world's gaze is unkind,", "I bear it all, willingly resigned."],
+    "cell": [1, 0]
+  },
+  {
+    "sign": "gemini",
+    "name": "Gemini",
+    "couplet": ["I've heard the whispers of your heart,", "But they no longer hold their part."],
+    "cell": [3, 0]
+  },
+  {
+    "sign": "cancer",
+    "name": "Cancer",
+    "couplet": ["Emotions fall like rain, unending and fraught,", "The more I ponder, the more tangled my thoughts."],
+    "cell": [4, 0]
+  },
+  {
+    "sign": "leo",
+    "name": "Leo",
+    "couplet": ["I lack all gentleness,", "Yet hold this lone courage."],
+    "cell": [5, 0]
+  },
+  {
+    "sign": "virgo",
+    "name": "Virgo",
+    "couplet": ["Let the soul remain fragmented,", "Until one distant year, when pain engulfs again."],
+    "cell": [0, 1]
+  },
+  {
+    "sign": "libra",
+    "name": "Libra",
+    "couplet": ["It's hard to balance restless fluctuations,", "Hard to forgive the heart's constant wavering."],
+    "cell": [2, 1]
+  },
+  {
+    "sign": "scorpio",
+    "name": "Scorpio",
+    "couplet": ["A dream within a dream,", "One I can never wake from."],
+    "cell": [3, 1]
+  },
+  {
+    "sign": "sagittarius",
+    "name": "Sagittarius",
+    "couplet": ["My sword,", "Where shall it roam?"],
+    "cell": [5, 1]
+  },
+  {
+    "sign": "capricorn",
+    "name": "Capricorn",
+    "couplet": ["So suffer your fate, Oh,", "Come here and give me a hug."],
+    "cell": [2, 2]
+  },
+  {
+    "sign": "aquarius",
+    "name": "Aquarius",
+    "couplet": ["With me you wander, no end in sight,", "Drifting freely through day and night."],
+    "cell": [3, 2]
+  },
+  {
+    "sign": "pisces",
+    "name": "Pisces",
+    "couplet": ["The great fish swims through the seams of dreams,", "Gazing upon the silhouette of your slumber."],
+    "cell": [4, 2]
+  }
+]

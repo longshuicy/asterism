@@ -1,0 +1,149 @@
+.loom {
+  min-height: 100svh;
+  padding-bottom: 96px;
+}
+
+.loom-scroll {
+  overflow-x: auto;
+  padding: 0 clamp(0px, 2vw, 24px);
+}
+
+.loom-svg {
+  display: block;
+  width: 100%;
+  min-width: 900px;
+  height: auto;
+}
+
+.warp {
+  cursor: pointer;
+}
+
+.warp image {
+  transition: opacity 0.4s;
+}
+
+.warp:hover image,
+.warp:focus-visible image {
+  opacity: 1;
+}
+
+.warp:focus-visible {
+  outline: none;
+}
+
+.warp:focus-visible .warp-name {
+  text-decoration: underline;
+}
+
+.warp-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  fill: var(--dim);
+}
+
+.warp.on .warp-name,
+.warp:hover .warp-name {
+  fill: var(--ink);
+}
+
+.weft {
+  fill: none;
+  stroke: var(--thread);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.weft-under {
+  fill: none;
+  stroke: var(--ground);
+  stroke-width: 7;
+  stroke-linecap: round;
+  opacity: 0.6;
+}
+
+.weft-plain {
+  stroke: var(--weft);
+  stroke-width: 1.2;
+  stroke-dasharray: 3 6;
+  opacity: 0.55;
+}
+
+.bead {
+  fill: var(--thread);
+  stroke: var(--ground);
+  stroke-width: 2;
+}
+
+.snip {
+  stroke: var(--bright);
+  stroke-width: 1.6;
+}
+
+.weft-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  fill: var(--bright);
+  stroke: var(--ground);
+  stroke-width: 4px;
+  paint-order: stroke;
+}
+
+.loom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  min-height: 76px;
+  padding: 12px clamp(16px, 3vw, 48px) calc(12px + env(safe-area-inset-bottom, 0px));
+  background: rgba(10, 31, 49, 0.94);
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px 24px;
+  flex-wrap: wrap;
+}
+
+.loom-bar p {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--soft);
+}
+
+.loom-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px 24px;
+  flex-wrap: wrap;
+}
+
+/* Laptop and up: nav, loom and bar share the viewport; nothing scrolls. */
+@media (min-width: 861px) and (min-height: 560px) {
+  .loom {
+    height: 100svh;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .loom-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .loom-scroll.fit .loom-svg {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+  }
+  .loom-bar {
+    position: static;
+    flex: none;
+  }
+}

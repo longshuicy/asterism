@@ -1,0 +1,6 @@
+node_modules/
+dist/
+# Generated from assets/drawings/ by `npm run images`
+public/img/
+.DS_Store
+*.log

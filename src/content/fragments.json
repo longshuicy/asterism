@@ -1,0 +1,841 @@
+[
+  {
+    "id": "aries-blade",
+    "drawing": "aries",
+    "kind": "echo",
+    "object": "The blade",
+    "sentence": "The first thing I learned to hold was something that could hurt.",
+    "x": 0.4,
+    "y": 0.5,
+    "d": 0.18,
+    "text": {
+      "x": 0.51,
+      "y": 0.47,
+      "align": "left"
+    },
+    "echo": {
+      "to": "sagittarius-sword",
+      "label": "The same blade, another year."
+    }
+  },
+  {
+    "id": "aries-lamb",
+    "drawing": "aries",
+    "kind": "echo",
+    "object": "The lamb",
+    "sentence": "Everyone told me to run. Nobody said where to.",
+    "x": 0.3,
+    "y": 0.66,
+    "d": 0.18,
+    "text": {
+      "x": 0.41,
+      "y": 0.63,
+      "align": "left"
+    },
+    "echo": {
+      "to": "taurus-matador",
+      "label": "Someone else taught to fight."
+    }
+  },
+  {
+    "id": "aries-moon",
+    "drawing": "aries",
+    "kind": "echo",
+    "object": "The moon",
+    "sentence": "The moon was the only one who watched and said nothing.",
+    "x": 0.506,
+    "y": 0.04,
+    "d": 0.07,
+    "text": {
+      "x": 0.447,
+      "y": 0.026,
+      "align": "right"
+    },
+    "echo": {
+      "to": "sagittarius-moon",
+      "label": "The same moon, another night."
+    }
+  },
+  {
+    "id": "aries-horns",
+    "drawing": "aries",
+    "kind": "counterpoint",
+    "object": "The horned figure",
+    "sentence": "I grew the horns because no one came.",
+    "x": 0.64,
+    "y": 0.22,
+    "d": 0.18,
+    "text": {
+      "x": 0.53,
+      "y": 0.19,
+      "align": "right"
+    },
+    "pair": "capricorn-horns"
+  },
+  {
+    "id": "taurus-bull",
+    "drawing": "taurus",
+    "kind": "echo",
+    "object": "The bull",
+    "sentence": "It lowers its head not to charge, but to endure.",
+    "x": 0.4,
+    "y": 0.7,
+    "d": 0.24,
+    "text": {
+      "x": 0.54,
+      "y": 0.67,
+      "align": "left"
+    },
+    "echo": {
+      "to": "leo-mouth",
+      "label": "Somewhere it stops enduring."
+    }
+  },
+  {
+    "id": "taurus-matador",
+    "drawing": "taurus",
+    "kind": "echo",
+    "object": "The matador",
+    "sentence": "He wore his best clothes to do the cruelest thing.",
+    "x": 0.84,
+    "y": 0.52,
+    "d": 0.16,
+    "text": {
+      "x": 0.74,
+      "y": 0.49,
+      "align": "right"
+    },
+    "echo": {
+      "to": "aries-lamb",
+      "label": "Someone else taught to fight."
+    }
+  },
+  {
+    "id": "taurus-window",
+    "drawing": "taurus",
+    "kind": "echo",
+    "object": "The rose window",
+    "sentence": "Behind every arena there is something ornate, pretending to be holy.",
+    "x": 0.55,
+    "y": 0.22,
+    "d": 0.22,
+    "text": {
+      "x": 0.42,
+      "y": 0.19,
+      "align": "right"
+    },
+    "echo": {
+      "to": "libra-border",
+      "label": "Another ornate cage."
+    }
+  },
+  {
+    "id": "gemini-face",
+    "drawing": "gemini",
+    "kind": "echo",
+    "object": "The covered face",
+    "sentence": "We hid our faces so neither of us had to answer.",
+    "x": 0.38,
+    "y": 0.42,
+    "d": 0.18,
+    "text": {
+      "x": 0.49,
+      "y": 0.39,
+      "align": "left"
+    },
+    "echo": {
+      "to": "virgo-eye",
+      "label": "Another face that will not look."
+    }
+  },
+  {
+    "id": "gemini-hands",
+    "drawing": "gemini",
+    "kind": "echo",
+    "object": "The hands",
+    "sentence": "Your hands still knew the way, even after the rest of you forgot.",
+    "x": 0.66,
+    "y": 0.77,
+    "d": 0.18,
+    "text": {
+      "x": 0.55,
+      "y": 0.74,
+      "align": "right"
+    },
+    "echo": {
+      "to": "scorpio-hands",
+      "label": "Other hands, holding on."
+    }
+  },
+  {
+    "id": "gemini-daisies",
+    "drawing": "gemini",
+    "kind": "echo",
+    "object": "The daisies",
+    "sentence": "We counted petals until there were none left to count.",
+    "x": 0.15,
+    "y": 0.15,
+    "d": 0.2,
+    "text": {
+      "x": 0.27,
+      "y": 0.12,
+      "align": "left"
+    },
+    "echo": {
+      "to": "scorpio-roses",
+      "label": "Elsewhere, flowers grow too close."
+    }
+  },
+  {
+    "id": "cancer-rings",
+    "drawing": "cancer",
+    "kind": "fragment",
+    "object": "The ripples",
+    "sentence": "Every thought dropped in and spread until it touched the edges.",
+    "x": 0.62,
+    "y": 0.8,
+    "d": 0.2,
+    "text": {
+      "x": 0.5,
+      "y": 0.77,
+      "align": "right"
+    }
+  },
+  {
+    "id": "cancer-center",
+    "drawing": "cancer",
+    "kind": "echo",
+    "object": "The closed buds",
+    "sentence": "Something soft at the centre, guarded by everything that grew around it.",
+    "x": 0.55,
+    "y": 0.5,
+    "d": 0.2,
+    "text": {
+      "x": 0.43,
+      "y": 0.47,
+      "align": "right"
+    },
+    "echo": {
+      "to": "pisces-pads",
+      "label": "Another small, enclosed world."
+    }
+  },
+  {
+    "id": "cancer-crab",
+    "drawing": "cancer",
+    "kind": "fragment",
+    "object": "The crab",
+    "sentence": "I walked sideways around it for years.",
+    "x": 0.88,
+    "y": 0.68,
+    "d": 0.16,
+    "text": {
+      "x": 0.78,
+      "y": 0.65,
+      "align": "right"
+    }
+  },
+  {
+    "id": "leo-mouth",
+    "drawing": "leo",
+    "kind": "echo",
+    "object": "The open mouth",
+    "sentence": "I was loud because quiet was where I could be hurt.",
+    "x": 0.5,
+    "y": 0.66,
+    "d": 0.24,
+    "text": {
+      "x": 0.36,
+      "y": 0.63,
+      "align": "right"
+    },
+    "echo": {
+      "to": "taurus-bull",
+      "label": "Somewhere it stops enduring."
+    }
+  },
+  {
+    "id": "leo-eye",
+    "drawing": "leo",
+    "kind": "echo",
+    "object": "The eye",
+    "sentence": "Look at the eye, not the teeth. The eye is afraid.",
+    "x": 0.8,
+    "y": 0.26,
+    "d": 0.12,
+    "text": {
+      "x": 0.72,
+      "y": 0.23,
+      "align": "right"
+    },
+    "echo": {
+      "to": "pisces-watcher",
+      "label": "Something else is watching."
+    }
+  },
+  {
+    "id": "virgo-eye",
+    "drawing": "virgo",
+    "kind": "echo",
+    "object": "The closed eye",
+    "sentence": "One eye closed, so I wouldn't have to see all of it.",
+    "x": 0.33,
+    "y": 0.64,
+    "d": 0.14,
+    "text": {
+      "x": 0.42,
+      "y": 0.61,
+      "align": "left"
+    },
+    "echo": {
+      "to": "gemini-face",
+      "label": "Another face that will not look."
+    }
+  },
+  {
+    "id": "virgo-lens",
+    "drawing": "virgo",
+    "kind": "echo",
+    "object": "The mechanical eye",
+    "sentence": "I built a better eye. It sees everything and feels none of it.",
+    "x": 0.6,
+    "y": 0.6,
+    "d": 0.16,
+    "text": {
+      "x": 0.5,
+      "y": 0.57,
+      "align": "right"
+    },
+    "echo": {
+      "to": "scorpio-device",
+      "label": "Another instrument for seeing."
+    }
+  },
+  {
+    "id": "virgo-hand",
+    "drawing": "virgo",
+    "kind": "fragment",
+    "object": "The hand",
+    "sentence": "Holding the pieces in place, just until next year.",
+    "x": 0.8,
+    "y": 0.8,
+    "d": 0.18,
+    "text": {
+      "x": 0.69,
+      "y": 0.77,
+      "align": "right"
+    }
+  },
+  {
+    "id": "libra-lamp",
+    "drawing": "libra",
+    "kind": "echo",
+    "object": "The lamp",
+    "sentence": "I kept it lit to prove I hadn't left.",
+    "x": 0.5,
+    "y": 0.56,
+    "d": 0.18,
+    "text": {
+      "x": 0.39,
+      "y": 0.53,
+      "align": "right"
+    },
+    "echo": {
+      "to": "capricorn-lamp",
+      "label": "Somewhere, another light is burning."
+    }
+  },
+  {
+    "id": "libra-figure",
+    "drawing": "libra",
+    "kind": "fragment",
+    "object": "The long-haired figure",
+    "sentence": "She stands where the scale can't reach her.",
+    "x": 0.24,
+    "y": 0.62,
+    "d": 0.18,
+    "text": {
+      "x": 0.35,
+      "y": 0.59,
+      "align": "left"
+    }
+  },
+  {
+    "id": "libra-border",
+    "drawing": "libra",
+    "kind": "echo",
+    "object": "The border",
+    "sentence": "Such beautiful edges around something that never sat still.",
+    "x": 0.08,
+    "y": 0.08,
+    "d": 0.14,
+    "text": {
+      "x": 0.17,
+      "y": 0.05,
+      "align": "left"
+    },
+    "echo": {
+      "to": "taurus-window",
+      "label": "Another ornate cage."
+    }
+  },
+  {
+    "id": "scorpio-hands",
+    "drawing": "scorpio",
+    "kind": "echo",
+    "object": "The hands",
+    "sentence": "These hands held on long after the dream should have ended.",
+    "x": 0.28,
+    "y": 0.8,
+    "d": 0.22,
+    "text": {
+      "x": 0.41,
+      "y": 0.77,
+      "align": "left"
+    },
+    "echo": {
+      "to": "gemini-hands",
+      "label": "Other hands, holding on."
+    }
+  },
+  {
+    "id": "scorpio-roses",
+    "drawing": "scorpio",
+    "kind": "echo",
+    "object": "The roses",
+    "sentence": "The roses grew in, through, and over everything.",
+    "x": 0.78,
+    "y": 0.3,
+    "d": 0.22,
+    "text": {
+      "x": 0.65,
+      "y": 0.27,
+      "align": "right"
+    },
+    "echo": {
+      "to": "gemini-daisies",
+      "label": "Elsewhere, flowers grow too close."
+    }
+  },
+  {
+    "id": "scorpio-device",
+    "drawing": "scorpio",
+    "kind": "echo",
+    "object": "The device",
+    "sentence": "Something was fitted to me so I could keep dreaming.",
+    "x": 0.49,
+    "y": 0.29,
+    "d": 0.14,
+    "text": {
+      "x": 0.58,
+      "y": 0.26,
+      "align": "left"
+    },
+    "echo": {
+      "to": "virgo-lens",
+      "label": "Another instrument for seeing."
+    }
+  },
+  {
+    "id": "scorpio-stitches",
+    "drawing": "scorpio",
+    "kind": "fragment",
+    "object": "The stitches",
+    "sentence": "Some things were sewn shut on purpose.",
+    "x": 0.42,
+    "y": 0.44,
+    "d": 0.1,
+    "text": {
+      "x": 0.49,
+      "y": 0.41,
+      "align": "left"
+    }
+  },
+  {
+    "id": "sagittarius-sword",
+    "drawing": "sagittarius",
+    "kind": "echo",
+    "object": "The sword",
+    "sentence": "I put it down, but I never stopped carrying it.",
+    "x": 0.62,
+    "y": 0.5,
+    "d": 0.18,
+    "text": {
+      "x": 0.51,
+      "y": 0.47,
+      "align": "right"
+    },
+    "echo": {
+      "to": "aries-blade",
+      "label": "The same blade, another year."
+    }
+  },
+  {
+    "id": "sagittarius-moon",
+    "drawing": "sagittarius",
+    "kind": "echo",
+    "object": "The moon",
+    "sentence": "The same moon, but now I'm the one who is armed.",
+    "x": 0.58,
+    "y": 0.14,
+    "d": 0.12,
+    "text": {
+      "x": 0.5,
+      "y": 0.11,
+      "align": "right"
+    },
+    "echo": {
+      "to": "aries-moon",
+      "label": "The same moon, another night."
+    }
+  },
+  {
+    "id": "sagittarius-figure",
+    "drawing": "sagittarius",
+    "kind": "echo",
+    "object": "The armoured figure",
+    "sentence": "Armour is just another way of being alone.",
+    "x": 0.28,
+    "y": 0.32,
+    "d": 0.18,
+    "text": {
+      "x": 0.39,
+      "y": 0.29,
+      "align": "left"
+    },
+    "echo": {
+      "to": "aquarius-figure",
+      "label": "Someone else, alone."
+    }
+  },
+  {
+    "id": "capricorn-lamp",
+    "drawing": "capricorn",
+    "kind": "echo",
+    "object": "The oil lamp",
+    "sentence": "There was a time when I thought keeping the light on was enough.",
+    "x": 0.24,
+    "y": 0.45,
+    "d": 0.16,
+    "text": {
+      "x": 0.34,
+      "y": 0.42,
+      "align": "left"
+    },
+    "echo": {
+      "to": "libra-lamp",
+      "label": "Somewhere, another light is burning."
+    }
+  },
+  {
+    "id": "capricorn-glass",
+    "drawing": "capricorn",
+    "kind": "echo",
+    "object": "The poured glass",
+    "sentence": "A drink poured for someone who isn't coming.",
+    "x": 0.129,
+    "y": 0.55,
+    "d": 0.1,
+    "text": {
+      "x": 0.199,
+      "y": 0.52,
+      "align": "left"
+    },
+    "echo": {
+      "to": "aquarius-jar",
+      "label": "Something else, poured out."
+    }
+  },
+  {
+    "id": "capricorn-signs",
+    "drawing": "capricorn",
+    "kind": "inscription",
+    "object": "The four signs",
+    "sentence": "Thought, then an idea, then heartbreak, then this.",
+    "x": 0.4,
+    "y": 0.879,
+    "d": 0.2,
+    "text": {
+      "x": 0.52,
+      "y": 0.679,
+      "align": "left"
+    },
+    "signs": [
+      "a thought,",
+      "an idea,",
+      "a heartbreak,",
+      "a tear."
+    ]
+  },
+  {
+    "id": "capricorn-horns",
+    "drawing": "capricorn",
+    "kind": "counterpoint",
+    "object": "The horns",
+    "sentence": "I wore them like a crown.",
+    "x": 0.6,
+    "y": 0.071,
+    "d": 0.12,
+    "text": {
+      "x": 0.52,
+      "y": 0.041,
+      "align": "right"
+    },
+    "pair": "aries-horns"
+  },
+  {
+    "id": "capricorn-pull",
+    "drawing": "capricorn",
+    "kind": "sealed",
+    "object": "A hand pulling a thread",
+    "sentence": "Someone is still pulling at it.",
+    "x": 0.821,
+    "y": 0.14,
+    "d": 0.1,
+    "text": {
+      "x": 0.751,
+      "y": 0.11,
+      "align": "right"
+    },
+    "sealed": {
+      "followedAny": true
+    }
+  },
+  {
+    "id": "capricorn-doorway",
+    "drawing": "capricorn",
+    "kind": "sealed",
+    "object": "The doorway",
+    "sentence": "I never walked through it, only past.",
+    "x": 0.9,
+    "y": 0.46,
+    "d": 0.12,
+    "text": {
+      "x": 0.82,
+      "y": 0.43,
+      "align": "right"
+    },
+    "sealed": {
+      "visited": "libra"
+    }
+  },
+  {
+    "id": "capricorn-goat",
+    "drawing": "capricorn",
+    "kind": "fragment",
+    "object": "The goat's eyes",
+    "sentence": "I dressed properly for the occasion of my own disappointment.",
+    "x": 0.621,
+    "y": 0.321,
+    "d": 0.12,
+    "text": {
+      "x": 0.541,
+      "y": 0.291,
+      "align": "right"
+    }
+  },
+  {
+    "id": "capricorn-painting",
+    "drawing": "capricorn",
+    "kind": "fragment",
+    "object": "The spotted painting",
+    "sentence": "Stains I framed so they'd look intended.",
+    "x": 0.121,
+    "y": 0.279,
+    "d": 0.1,
+    "text": {
+      "x": 0.191,
+      "y": 0.249,
+      "align": "left"
+    }
+  },
+  {
+    "id": "capricorn-pelmet",
+    "drawing": "capricorn",
+    "kind": "fragment",
+    "object": "The pelmet",
+    "sentence": "Everything in this room is dressed, even the windows.",
+    "x": 0.35,
+    "y": 0.06,
+    "d": 0.1,
+    "text": {
+      "x": 0.42,
+      "y": 0.03,
+      "align": "left"
+    }
+  },
+  {
+    "id": "capricorn-cactus",
+    "drawing": "capricorn",
+    "kind": "fragment",
+    "object": "The cactus",
+    "sentence": "The only thing here that can go without.",
+    "x": 0.41,
+    "y": 0.4,
+    "d": 0.08,
+    "text": {
+      "x": 0.47,
+      "y": 0.37,
+      "align": "left"
+    }
+  },
+  {
+    "id": "capricorn-holds",
+    "drawing": "capricorn",
+    "kind": "fragment",
+    "object": "What he holds",
+    "sentence": "A cloth for tears he won't admit to.",
+    "x": 0.74,
+    "y": 0.66,
+    "d": 0.1,
+    "text": {
+      "x": 0.67,
+      "y": 0.63,
+      "align": "right"
+    }
+  },
+  {
+    "id": "capricorn-table",
+    "drawing": "capricorn",
+    "kind": "fragment",
+    "object": "The side table",
+    "sentence": "Where I put things down and forgot them.",
+    "x": 0.121,
+    "y": 0.729,
+    "d": 0.1,
+    "text": {
+      "x": 0.191,
+      "y": 0.699,
+      "align": "left"
+    }
+  },
+  {
+    "id": "aquarius-whale",
+    "drawing": "aquarius",
+    "kind": "echo",
+    "object": "The whale",
+    "sentence": "It came close once, and then it went back to the deep.",
+    "x": 0.28,
+    "y": 0.4,
+    "d": 0.18,
+    "text": {
+      "x": 0.39,
+      "y": 0.37,
+      "align": "left"
+    },
+    "echo": {
+      "to": "pisces-swimmer",
+      "label": "The same water, a smaller world."
+    }
+  },
+  {
+    "id": "aquarius-figure",
+    "drawing": "aquarius",
+    "kind": "echo",
+    "object": "The seated figure",
+    "sentence": "I sat with my knees up, the way you do when nothing is coming.",
+    "x": 0.5,
+    "y": 0.32,
+    "d": 0.18,
+    "text": {
+      "x": 0.39,
+      "y": 0.29,
+      "align": "right"
+    },
+    "echo": {
+      "to": "sagittarius-figure",
+      "label": "Someone else, alone."
+    }
+  },
+  {
+    "id": "aquarius-jar",
+    "drawing": "aquarius",
+    "kind": "echo",
+    "object": "The jar",
+    "sentence": "Everything I carried, I eventually poured into the sea.",
+    "x": 0.86,
+    "y": 0.7,
+    "d": 0.14,
+    "text": {
+      "x": 0.77,
+      "y": 0.67,
+      "align": "right"
+    },
+    "echo": {
+      "to": "capricorn-glass",
+      "label": "Something else, poured out."
+    }
+  },
+  {
+    "id": "aquarius-birds",
+    "drawing": "aquarius",
+    "kind": "fragment",
+    "object": "The birds",
+    "sentence": "Even the birds were leaving.",
+    "x": 0.8,
+    "y": 0.07,
+    "d": 0.12,
+    "text": {
+      "x": 0.72,
+      "y": 0.04,
+      "align": "right"
+    }
+  },
+  {
+    "id": "pisces-swimmer",
+    "drawing": "pisces",
+    "kind": "echo",
+    "object": "The one below",
+    "sentence": "Smaller water. Closer company.",
+    "x": 0.33,
+    "y": 0.66,
+    "d": 0.22,
+    "text": {
+      "x": 0.46,
+      "y": 0.63,
+      "align": "left"
+    },
+    "echo": {
+      "to": "aquarius-whale",
+      "label": "The same water, a smaller world."
+    }
+  },
+  {
+    "id": "pisces-watcher",
+    "drawing": "pisces",
+    "kind": "echo",
+    "object": "The one above",
+    "sentence": "Someone was always watching from just above the surface.",
+    "x": 0.68,
+    "y": 0.22,
+    "d": 0.16,
+    "text": {
+      "x": 0.58,
+      "y": 0.19,
+      "align": "right"
+    },
+    "echo": {
+      "to": "leo-eye",
+      "label": "Something else is watching."
+    }
+  },
+  {
+    "id": "pisces-pads",
+    "drawing": "pisces",
+    "kind": "echo",
+    "object": "The lily pads",
+    "sentence": "A world small enough to hold in two hands.",
+    "x": 0.58,
+    "y": 0.88,
+    "d": 0.2,
+    "text": {
+      "x": 0.46,
+      "y": 0.68,
+      "align": "right"
+    },
+    "echo": {
+      "to": "cancer-center",
+      "label": "Another small, enclosed world."
+    }
+  }
+]

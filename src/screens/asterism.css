@@ -1,0 +1,228 @@
+.asterism {
+  height: 100svh;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sky {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px clamp(16px, 3vw, 40px);
+}
+
+/* Six by three slots; twelve drawings, six left dark. */
+.field {
+  position: relative;
+  width: min(100%, calc((100svh - 100px) * 1360 / 760));
+  aspect-ratio: 1360 / 760;
+}
+
+.cell {
+  position: absolute;
+  left: calc((var(--col) - 1) * 100% / 6);
+  top: calc((var(--row) - 1) * 100% / 3);
+  width: calc(100% / 6);
+  aspect-ratio: 1;
+}
+
+.ghost {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.07;
+  display: block;
+}
+
+.specimen {
+  position: absolute;
+  z-index: 1;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.specimen .window {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(232, 227, 214, 0.12);
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
+}
+
+.specimen .window img {
+  position: absolute;
+  max-width: none;
+  aspect-ratio: 1;
+  display: block;
+}
+
+.specimen-label {
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--bright);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  text-shadow:
+    0 0 3px var(--ground),
+    0 0 8px var(--ground);
+}
+
+.specimen.label-left .specimen-label {
+  left: auto;
+  right: calc(100% + 10px);
+}
+
+.specimen:hover,
+.specimen:focus-visible {
+  z-index: 2;
+  outline: none;
+}
+
+.specimen:hover .window,
+.specimen:focus-visible .window {
+  box-shadow:
+    0 0 0 1.5px var(--thread),
+    0 0 28px rgba(232, 227, 214, 0.18);
+  transform: scale(1.08);
+}
+
+.specimen:hover .specimen-label,
+.specimen:focus-visible .specimen-label {
+  opacity: 1;
+}
+
+.title-block {
+  position: absolute;
+  left: 0;
+  bottom: 4%;
+  max-width: 34%;
+  pointer-events: none;
+}
+
+.title-block h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 108px);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+
+.title-block .tagline {
+  margin: 14px 0 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.35;
+}
+
+.title-block .how {
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.title-block .credit {
+  margin: 18px 0 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--faint);
+  pointer-events: auto;
+}
+
+.title-block .credit a {
+  color: var(--thread);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.title-block .credit a:hover {
+  color: #ff9a8e;
+}
+
+.last-story {
+  position: absolute;
+  right: 0;
+  bottom: 4%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.last-story:hover {
+  color: var(--bright);
+}
+
+.mini-print {
+  width: 40px;
+  height: 50px;
+  box-shadow: 0 0 0 1px rgba(169, 185, 198, 0.4);
+}
+
+/* Below 700 px the Asterism stacks: three across, four down, title first. */
+@media (max-width: 700px) {
+  .asterism {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+  .sky {
+    padding-top: 0;
+  }
+  .field {
+    width: 100%;
+    aspect-ratio: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .cell {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+  }
+  .ghost {
+    opacity: 0.1;
+  }
+  .title-block {
+    position: static;
+    grid-column: 1 / -1;
+    order: -1;
+    max-width: none;
+    padding: 8px 0 24px;
+  }
+  .specimen-label {
+    display: none;
+  }
+  .last-story {
+    position: static;
+    grid-column: 1 / -1;
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,430 @@
+.room {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The drawing on the left, as large as the screen allows; the notes beside it. */
+.room-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(28px, 3.5vw, 56px);
+  align-items: start;
+  padding: 8px clamp(16px, 3vw, 40px) 40px;
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stage .frame {
+  width: min(calc(100svh - 100px), 60vw);
+}
+
+.look {
+  margin: 14px 0 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--muted);
+  transition: opacity 1.2s;
+  pointer-events: none;
+}
+
+.look.gone {
+  opacity: 0;
+}
+
+.dark-lift {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  background: rgba(10, 31, 49, 0.94);
+  pointer-events: none;
+}
+
+.transit {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  overflow: hidden;
+  background: var(--ground);
+}
+
+.transit img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  will-change: transform, opacity;
+}
+
+.fly {
+  position: fixed;
+  z-index: 60;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fly img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── notes ── */
+
+.notes {
+  max-width: 820px;
+  padding-top: 4px;
+}
+
+.sign-name {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(36px, 3.4vw, 48px);
+  line-height: 1.05;
+}
+
+.couplet {
+  margin: 10px 0 18px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--soft);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: #8fa3b3;
+}
+
+.legend li {
+  position: relative;
+}
+
+.legend-term {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: help;
+  border-bottom: 1px dotted transparent;
+}
+
+.legend-term:hover,
+.legend-term:focus-visible {
+  color: var(--bright);
+  border-bottom-color: currentColor;
+  outline: none;
+}
+
+/* The rule for each kind, under its name on hover or keyboard focus. */
+.legend-rule {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  z-index: 20;
+  width: 240px;
+  padding: 10px 12px;
+  background: #0d2840;
+  border: 1px solid var(--rule);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--soft);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3px);
+  transition:
+    opacity 0.15s,
+    transform 0.15s,
+    visibility 0.15s;
+  pointer-events: none;
+}
+
+.legend li:last-child .legend-rule,
+.legend li:nth-last-child(2) .legend-rule {
+  left: auto;
+  right: 0;
+}
+
+.legend-term:hover + .legend-rule,
+.legend-term:focus-visible + .legend-rule {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.legend li.echo {
+  color: var(--ink);
+}
+
+.dry {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--thread);
+}
+
+.found-count {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #8fa3b3;
+}
+
+.found-count span {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--faint);
+}
+
+/* A clue still to come: its letter, and a blank where its line will be. */
+.found li.unfound .found-letter {
+  color: var(--dim);
+}
+
+.placeholder {
+  display: block;
+  height: 9px;
+  width: 88%;
+  margin-top: 6px;
+  border-radius: 5px;
+  background: rgba(169, 185, 198, 0.08);
+}
+
+.placeholder.short {
+  width: 52%;
+  margin-top: 2px;
+}
+
+/* Two columns, lettered as on the clue map; only what has been found. */
+.found {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.found li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 11px;
+  border-top: 1px solid rgba(169, 185, 198, 0.18);
+}
+
+.found-obj {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 13px;
+  color: #8fa3b3;
+}
+
+.found-letter {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.found-sentence {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--bright);
+}
+
+.found-note {
+  margin: 0;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #8fa3b3;
+}
+
+a.found-note {
+  align-self: flex-start;
+  min-height: 28px;
+  color: var(--thread);
+  text-decoration: none;
+}
+
+a.found-note:hover,
+a.found-note:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a.found-note.taken {
+  opacity: 0.75;
+}
+
+.found-note-text {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.found-note-text em {
+  font-family: var(--serif);
+  font-size: 14px;
+  color: var(--soft);
+}
+
+@media (max-width: 1100px) {
+  .found {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .room-body {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .stage {
+    padding: 0;
+  }
+  .stage .frame {
+    width: 100%;
+  }
+  .found {
+    grid-template-columns: 1fr;
+  }
+}
+
+a.found-note.nudge {
+  animation: nudge 1.8s ease-in-out 1;
+}
+
+@keyframes nudge {
+  45% {
+    text-shadow: 0 0 16px rgba(255, 122, 107, 0.85);
+  }
+}
+
+/*
+ * Laptop and up: the whole room fits the viewport. The drawing is sized from the
+ * height; the notes share what is left, with type and spacing scaled to it, and
+ * each clue's line clamped if the screen is short.
+ */
+@media (min-width: 861px) and (min-height: 560px) {
+  .room {
+    height: 100svh;
+    overflow: hidden;
+  }
+  .room-body {
+    min-height: 0;
+    align-items: stretch;
+    padding-bottom: 20px;
+  }
+  .stage .frame {
+    width: min(calc(100svh - 84px), 56vw);
+  }
+  .look {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 2px 12px;
+    background: var(--scrim);
+    z-index: 4;
+  }
+  .notes {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .sign-name {
+    font-size: clamp(30px, 5svh, 48px);
+  }
+  .couplet {
+    margin: clamp(4px, 1svh, 10px) 0 clamp(8px, 2svh, 18px);
+    font-size: clamp(16px, 2.3svh, 19px);
+  }
+  .legend {
+    margin-bottom: clamp(8px, 2svh, 18px);
+  }
+  .found-count {
+    margin-bottom: clamp(4px, 1svh, 10px);
+  }
+  /* The list takes what is left; Room.tsx shortens sentences until it fits. */
+  .found {
+    flex: 0 1 auto;
+    min-height: 0;
+    overflow: hidden;
+    row-gap: clamp(4px, 1.3svh, 14px);
+  }
+  .found li {
+    gap: clamp(2px, 0.5svh, 5px);
+    padding-top: clamp(5px, 1.1svh, 11px);
+  }
+  .found-sentence {
+    font-size: clamp(14px, 1.9svh, 16px);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--clamp, none);
+    overflow: hidden;
+  }
+  a.found-note {
+    min-height: 0;
+  }
+  .placeholder {
+    margin-top: clamp(3px, 0.6svh, 6px);
+  }
+}
+
+/* Compact: each clue's note moves up beside its object, saving a line per clue. */
+.found.compact li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    'obj note'
+    'sent sent';
+  column-gap: 12px;
+  align-items: baseline;
+}
+
+.found.compact .found-obj {
+  grid-area: obj;
+}
+
+.found.compact .found-sentence {
+  grid-area: sent;
+}
+
+.found.compact .found-note {
+  grid-area: note;
+  justify-self: end;
+}
+
+.found.compact .placeholder {
+  grid-column: 1 / -1;
+}
