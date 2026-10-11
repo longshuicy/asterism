@@ -44,7 +44,6 @@ export default function Asterism() {
               className="cell"
               style={{ '--col': d.cell[0] + 1, '--row': d.cell[1] + 1 } as React.CSSProperties}
             >
-              <img className="ghost" src={imageUrl(d.sign, 256)} alt="" />
               {specimensOf(d).map((f) => (
                 <Specimen key={f.id} f={f} onPick={pick} />
               ))}
@@ -77,7 +76,7 @@ export default function Asterism() {
 
 /**
  * A window punched in the dark: the drawing shows through at full strength,
- * exactly where the clue sits in its faint ghost.
+ * exactly where the clue sits in it.
  */
 function Specimen({ f, onPick }: { f: Fragment; onPick: (f: Fragment) => void }) {
   const label = objectPhrase(f)
